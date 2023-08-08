@@ -22,17 +22,17 @@ env_shiny$ui_1 <- fluidPage(
         fileInput("file_cov", "Optional: File with Covariates",
                   multiple = FALSE,
                   accept = c(".csv",".rds"))),
-      checkboxInput("recode_slopes", "Recode Slopes Based on Categorical Att (Optional)"),
-      conditionalPanel(
-        condition = "input.recode_slopes == true",
-        textInput("recode_cat",   "Categorical variable (e.g. sku) to recode slopes", value = "", width = NULL, placeholder = NULL),
-        textInput("recode_therm", "Slopes variables have this unique common text", value = "", width = NULL, placeholder = NULL)),
       tags$hr(),
       # Checkboxes
       checkboxInput("add_none", "Add None Variable when All Attributes are 0", TRUE),
       checkboxInput("check_collinearity", "Check Collinearity", TRUE),
       checkboxInput("est_aggmodel", "Estimate Aggregate Model", TRUE),
       checkboxInput("auto_stop", "Stop Instance after Running", TRUE),
+      checkboxInput("recode_slopes", "Recode Slopes Based on Categorical Att (Optional)"),
+      conditionalPanel(
+        condition = "input.recode_slopes == true",
+        textInput("recode_cat",   "Categorical variable (e.g. sku) to recode slopes", value = "", width = NULL, placeholder = NULL),
+        textInput("recode_therm", "Slopes variables have this unique common text", value = "", width = NULL, placeholder = NULL)),
       checkboxInput("est_EB", "Estimate Empirical Bayes with Draws", FALSE),
       textInput("out_prefix", "Text you want to prefix output", value = "MyCBC", width = NULL, placeholder = NULL),
       #textInput("password", "Enter SKIMVERSE password to automatically STOP instance after running:", value = "", width = NULL, placeholder = NULL),
