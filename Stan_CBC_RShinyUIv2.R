@@ -26,7 +26,7 @@ env_shiny$ui_1 <- fluidPage(
       conditionalPanel(
         condition = "input.recode_slopes == true",
         textInput("recode_cat",   "Categorical variable (e.g. sku) to recode slopes", value = "", width = NULL, placeholder = NULL),
-        textInput("recode_therm", "Slopes variables have this unique common text", value = "", width = NULL, placeholder = NULL),
+        textInput("recode_therm", "Slopes variables have this unique common text", value = "", width = NULL, placeholder = NULL)),
       tags$hr(),
       # Checkboxes
       checkboxInput("add_none", "Add None Variable when All Attributes are 0", TRUE),
