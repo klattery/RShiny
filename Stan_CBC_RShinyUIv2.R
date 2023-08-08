@@ -118,8 +118,8 @@ env_shiny$server_1 <- function(input, output) {
       .GlobalEnv$data_cov <- data3()
     } else .GlobalEnv$data_cov <- NULL
     if (input$recode_slopes){
-      .GlobalEnv$control_code$recode_therm$cat_var <- recode_cat
-      .GlobalEnv$control_code$recode_therm$therm_var <- recode_therm
+      .GlobalEnv$control_code$recode_therm$cat_var <- input$recode_cat
+      .GlobalEnv$control_code$recode_therm$therm_var <- input$recode_therm
     } else {
       .GlobalEnv$control_code$recode_therm$cat_var <- NULL
       .GlobalEnv$control_code$recode_therm$therm_var <- NULL
