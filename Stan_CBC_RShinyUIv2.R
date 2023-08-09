@@ -31,8 +31,8 @@ env_shiny$ui_1 <- fluidPage(
       checkboxInput("recode_slopes", "Recode Slopes Based on Categorical Att (Optional)"),
       conditionalPanel(
         condition = "input.recode_slopes == true",
-        textInput("recode_cat",   "Categorical variable (e.g. sku) to recode slopes", value = "", width = NULL, placeholder = NULL),
-        textInput("recode_therm", "Slopes variables have this unique common text", value = "", width = NULL, placeholder = NULL)),
+        textInput("recode_cat",   "Categorical variable (e.g. sku) to recode slopes", value = NULL, width = NULL, placeholder = NULL),
+        textInput("recode_therm", "Slopes variables have this unique common text", value = NULL, width = NULL, placeholder = NULL)),
       checkboxInput("est_EB", "Estimate Empirical Bayes with Draws", FALSE),
       textInput("out_prefix", "Text you want to prefix output", value = "MyCBC", width = NULL, placeholder = NULL),
       #textInput("password", "Enter SKIMVERSE password to automatically STOP instance after running:", value = "", width = NULL, placeholder = NULL),
